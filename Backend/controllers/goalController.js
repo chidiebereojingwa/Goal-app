@@ -2,13 +2,14 @@
 //@route Get /api/goals
 //@access private
 const getGoals = (req, res) =>{
+    if (!re)
     res.status(200).json({ message: "Get new goals from the controller" });
 }
 
 //@desc Get goals
 //@route Get /api/goals
 //@access private
-const postGoals = (req, res) =>{
+const setGoals = (req, res) =>{
     res.status(200).json({ message: "Set goal" });
 }
 
@@ -28,7 +29,7 @@ const deleteGoals = (req, res) =>{
 
 module.exports = {
   getGoals,
-  postGoals,
+  setGoals,
   putGoals,
   deleteGoals,
 };
