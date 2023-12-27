@@ -1,8 +1,10 @@
 //@desc Get goals
 //@route Get /api/goals
+
+const { text } = require("express");
+
 //@access private
 const getGoals = (req, res) =>{
-    if (!re)
     res.status(200).json({ message: "Get new goals from the controller" });
 }
 
@@ -10,6 +12,10 @@ const getGoals = (req, res) =>{
 //@route Get /api/goals
 //@access private
 const setGoals = (req, res) =>{
+    if (!req.body == text) {
+      res.status(400);
+      throw new Error("Please add a text field");
+    }
     res.status(200).json({ message: "Set goal" });
 }
 
